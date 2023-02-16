@@ -42,6 +42,8 @@ RUN npm run build
 # Set NODE_ENV environment variable
 ENV NODE_ENV production
 
+ENV DATABASE_URL mongodb://database:27017/app?authSource=admin
+
 # Running `npm install` removes the existing node_modules directory and passing in --only=production ensures that only the production dependencies are installed. This ensures that the node_modules directory is as optimized as possible
 RUN npm install --only=production && npm cache clean --force
 
