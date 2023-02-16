@@ -35,14 +35,11 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+  # build image
+  docker build -t docker-nestjs .
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+  # start app
+  docker run -dp 3000:3000 docker-nestjs
 ```
 
 ## Test
